@@ -1,0 +1,334 @@
+/* Correct Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: 'Fredoka One', sans-serif;
+  line-height: 1.6;
+  background: #fffdf8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #f5f5c6;
+  padding: 8px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  height: 80px;        
+  margin-top: 10px;
+  overflow: hidden;    
+}
+
+header .logo img {
+  width: 150px;   
+  height: auto;   
+  display: block;
+  object-fit: contain; 
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header nav a {
+  font-weight: 600;           
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;             
+  padding: 8px 20px;          
+  transition: color 0.3s ease;
+  display: inline-block;      
+  font-family: 'Fredoka One', sans-serif; 
+  font-weight: bold;
+}
+
+header .btn {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: bold;
+  background: white;
+  padding: 6px 40px;        
+  border-radius: 50px;      
+  font-size: 16px;          
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0 20px;           
+  min-width: 180px;         
+  text-align: center;       
+}
+
+header .btn:hover {
+  background: orange;       
+  color: white;             
+}
+
+/* Banner */
+.banner {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  background: #ffe4a3;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 20px auto;
+  width: 95%;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;                 
+  height: auto;
+  display: block;
+  border-radius: 15px;        
+}
+
+.banner h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+/* About, Services, Stalls, Categories, Footer */
+.about, .services, .stalls, .categories, footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about h2, .services h2, .stalls h2, .categories h2, footer h2 {
+  margin-bottom: 15px;
+  color: #000000;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.about-box {
+  background: #FDEAC3;
+  border: 10px solid #FFD5A4;
+  border-radius: 25px;        
+  padding: 60px 50px;     
+  margin: 10px auto;     
+  width: 95%;             
+  max-width: 1200px;      
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08); 
+  text-align: center;           
+  font-family: 'Fredoka One', sans-serif;
+  margin-top: 10px;     
+}
+
+.about-box p {
+  font-size: 20px;       
+  line-height: 1.8;      
+  color: #000;
+  text-align: justify;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.about h2 {
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 48px;       
+  font-weight: 700;
+  color: black;
+  margin-bottom: 15px;   
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Flex wrapper for each row */
+.service-row {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  justify-content: center; /* horizontal alignment */
+  gap: 30px; /* space between text and image */
+  flex-wrap: wrap;
+  position: relative; /* needed for absolute positioning */
+}
+
+/* Box styling */
+.service-box {
+  background: #FDEAC3;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  border: 10px solid #FFD5A4;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* keeps text on top if overlapping */
+}
+
+/* Text styling */
+.service-box p {
+  margin: 0;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.service-img {
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  border-radius: 10px;
+  float: none;        /* ensures no floating */
+  position: relative; /* ensures it stays in flow of flex row */
+}
+
+
+/* Independent image: outside of container, on the left */
+.independent-row {
+  justify-content: flex-start; /* align items left */
+}
+
+.independent-img {
+  width: 200px;  /* change freely */
+  height: auto;
+  margin-right: -100px; /* overlaps or sticks outside the box */
+  border-radius: 10px;
+  z-index: 0; /* behind the box if overlapping */
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  .service-row, .independent-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-img, .independent-img {
+    max-width: 300px;
+    margin-right: 0; /* reset for mobile */
+  }
+}
+
+.services h3 {
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.stall-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.stall-item {
+  text-align: center;       /* centers the image inside the container */
+  padding: 15px;            /* optional spacing around each image */
+  background: #eeeeff;      /* optional: light background */
+  border-radius: 30px;      /* optional rounded corners for container */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.stall-item img {
+  width: 50%;       /* smaller than full container width */
+  height: auto;     /* keeps original aspect ratio */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.stalls h4 {
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Categories */
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-grid img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Footer */
+footer {
+  background: #f5f5c6;
+  padding: 20px;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+footer .contact-info p {
+  margin: 5px 0;
+}
+
+.contact h5 {
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-box {
+  background: #FDEAC3;
+  padding: 15px;
+  border-radius: 50px;
+  max-width: 800px;
+  width: 100%;
+  border: 10px solid #FFD5A4;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  font-size: 20px;
+}
+
+.contact-info {
+  display: flex;              /* horizontal layout */
+  justify-content: center;    /* center items horizontally */
+  gap: 20px;                  /* space between each box */
+  flex-wrap: wrap;            /* wraps to next line if screen is small */
+}
+
+.contact-item {
+  background: #FDEAC3;
+  padding: 15px;
+  border-radius: 50px;
+  border: 10px solid #FFD5A4;
+  text-align: center;
+  max-width: 350px;
+  flex: 1 1 auto;             
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 18px;
+}
+
+
