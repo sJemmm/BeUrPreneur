@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet');
+
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    font-family: 'Fredoka', sans-serif;
+
+    /* Background Image */
+    background: url("image/background.png") no-repeat center center fixed;
+    background-size: cover;       /* 🔑 fills the entire screen */
+    background-color: #fefafa;    /* fallback color if image fails */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Card */
+.login-card {
+    background: #f8f1d7;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo img {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+.logo h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.logo .be { color: #000; }
+.logo .ur { color: #d35400; font-weight: 600; }
+.logo .preneur { color: #000; }
+
+/* Input groups */
+.input-group {
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Input with icon */
+.input-box {
+    position: relative;
+}
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border-radius: 25px;
+    border: none;
+    background: #f4f4f4;
+    font-size: 0.95rem;
+    outline: none;
+}
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1rem;
+}
+
+/* Button */
+.btn {
+    width: 50%;
+    padding: 12px;
+    border-radius: 25px;
+    background: #ff8800;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #e56d00;
+    color: #ffff;
+}
+
+/* Signup text */
+.signup-text {
+    font-size: 0.85rem;
+    color: #000;
+}
+.signup-text a {
+    color: #ff8800;
+    font-weight: 600;
+    text-decoration: none;
+}
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Error */
+.error {
+    background: #ffe0e0;
+    color: #c0392b;
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
